@@ -3,27 +3,140 @@
 
 	<head>
 
-		<title>Test</title>
+		<title>./start</title>
 
-		<link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
-		<script type="application/javascript" src="bootstrap/jquery-3.4.1.slim.min.js"></script>
-		<script type="application/javascript" src="bootstrap/popper.min.js"></script>
-		<script type="application/javascript" src="bootstrap/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+		<script src="https://kit.fontawesome.com/c14e8b115b.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+		<style>
+
+			@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300&display=swap');
+
+			body {
+    			font-family: 'Roboto Mono', monospace;
+				background-color: rgb(5, 5, 7);
+				min-height: 100vh;
+				display: flex;
+				align-items: center;
+			}
+			
+			.sp-item {
+				margin-bottom: 30px;
+			}
+
+			.sp-link {
+				color: rgb(160, 160, 160);
+				text-decoration: none;
+			}
+
+			.sp-link:hover {
+				color: rgb(255, 255, 255);
+				text-decoration: none;
+			}
+
+			.sp-icon {
+				padding-bottom: 5px;
+			}
+
+			.sp-icon-thin {
+				-webkit-text-stroke: 1px rgb(5, 5, 7);
+			}
+
+			.sp-icon-vthin {
+				-webkit-text-stroke: 2px rgb(5, 5, 7);
+			}
+
+			.sp-text {
+				font-size: 15px;
+			}
+
+		</style>
 
 	</head>
 
 	<body>
 
 		<div class="container">
-			
-			<div class="row align-items-center">
-				
+			<div class="row">
 				<div class="col-sm-8 offset-sm-2">
-					Test
+
+					<div class="row">
+
+						<div class="col-sm-3 text-center sp-item">
+							<a href="https://github.com/conormccauley1999/" class="sp-link">
+								<i class="fab fa-github sp-icon fa-2x"></i>
+								<br>
+								<span class="sp-text">github</span>
+							</a>
+						</div>
+
+						<div class="col-sm-3 text-center sp-item">
+							<a href="https://mail.google.com/mail/u/0/#inbox" class="sp-link">
+								<i class="far fa-envelope sp-icon sp-icon-thin fa-2x"></i>
+								<br>
+								<span class="sp-text">gmail</span>
+							</a>
+						</div>
+
+						<div class="col-sm-3 text-center sp-item">
+							<a href="https://twitter.com/home" class="sp-link">
+								<i class="fab fa-twitter sp-icon fa-2x"></i>
+								<br>
+								<span class="sp-text">twitter</span>
+							</a>
+						</div>
+
+						<div class="col-sm-3 text-center sp-item">
+							<a href="https://www.facebook.com/messages/" class="sp-link">
+								<i class="fab fa-facebook-messenger sp-icon fa-2x"></i>
+								<br>
+								<span class="sp-text">messenger</span>
+							</a>
+						</div>
+
+					</div>
+
+					<div class="row">
+						
+						<div class="col-sm-3 text-center sp-item">
+							<a href="https://open.kattis.com/problems?show_solved=off&show_tried=on&show_untried=on&order=problem_difficulty" class="sp-link">
+								<i class="fas fa-code sp-icon sp-icon-vthin fa-2x"></i>
+								<br>
+								<span class="sp-text">kattis</span>
+							</a>
+						</div>
+
+						<div class="col-sm-3 text-center sp-item">
+							<a href="http://boards.4channel.org/sci/catalog" class="sp-link">
+								<i class="fas fa-vial sp-icon sp-icon-thin fa-2x"></i>
+								<br>
+								<span class="sp-text">/sci/</span>
+							</a>
+						</div>
+
+						<div class="col-sm-3 text-center sp-item">
+							<a href="https://www.youtube.com/feed/subscriptions" class="sp-link">
+								<i class="fab fa-youtube sp-icon fa-2x"></i>
+								<br>
+								<span class="sp-text">youtube</span>
+							</a>
+						</div>
+						
+						<div class="col-sm-3 text-center sp-item">
+							<a href="https://projecteuler.net/archives" class="sp-link">
+								<i class="fas fa-square-root-alt sp-icon sp-icon-vthin fa-2x"></i>
+								<br>
+								<span class="sp-text">proj-euler</span>
+							</a>
+						</div>
+
+					</div>
+
 				</div>
-
 			</div>
-
 		</div>
 
 	</body>
