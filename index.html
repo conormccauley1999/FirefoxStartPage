@@ -7,7 +7,7 @@
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 		<script src="https://kit.fontawesome.com/c14e8b115b.js"></script>
-		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
@@ -51,6 +51,20 @@
 
 			.sp-text {
 				font-size: 15px;
+			}
+
+			.sp-verse {
+				margin-top: 20px;
+			}
+
+			.sp-verse-text {
+				font-size: 12px;
+				color: rgb(180, 180, 180);
+			}
+
+			.sp-verse-source {
+				font-size: 12px;
+				color: rgb(160, 160, 160);
 			}
 
 		</style>
@@ -135,9 +149,35 @@
 
 					</div>
 
+					<div class="row">
+						<div class="col-sm-12 col-md-8 offset-md-2">
+
+							<blockquote class="sp-verse blockquote">
+  								<p id="verse-text" class="sp-verse-text mb-0 text-center"></p>
+  								<footer id="verse-source" class="sp-verse-source blockquote-footer text-right"></footer>
+							</blockquote>
+
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>
+
+		<script>
+			$(document).ready(function() {
+				$.ajax({
+					url: "https://labs.bible.org/api/?passage=random&type=json&callback=myCallback",
+					crossDomain: true,
+					dataType: "jsonp",
+					success: function(r) {
+						$("#verse-text").html(r[0].text);
+						$("#verse-text").children("a").remove();
+						$("#verse-source").html(`${r[0].bookname} ${r[0].chapter}:${r[0].verse}`);
+					}
+				});
+			});
+		</script>
 
 	</body>
 
